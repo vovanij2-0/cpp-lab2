@@ -33,7 +33,7 @@ long double t(long double n)
     return res;
 }
     
-long double final(float y){
+long double final(long doublet y){
     long double n1 = 7 * t(0.25) + 2 * t(1 + y);
     long double n2 = 6 - t(pow(y, 2) - 1);
     // cout << n1 << " " << n2 << endl;
