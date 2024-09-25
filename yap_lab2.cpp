@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmarth>
+#include <cmath>
 
 using namespace std;
 
