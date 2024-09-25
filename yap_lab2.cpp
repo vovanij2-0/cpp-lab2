@@ -3,9 +3,9 @@
 
 using namespace std;
 
-int double_fact(int n)
+long long int double_fact(int n)
 {
-    int res = 1;
+    long long int res = 1;
 
     for (int i = n; i > 0; i-=2)
         res *= i;
@@ -13,29 +13,29 @@ int double_fact(int n)
     return res;
 }
     
-float t(float n)
+long double t(long double n)
 {
-    float s1 = 0;
-    float s2 = 0;
+    long double s1 = 0;
+    long double s2 = 0;
     for (int k = 0; k < 11; k++){
-        float num1 = pow(n, (2 * k + 1));
-        float num2 = double_fact(2 * k + 1);
+        long double num1 = pow(n, (2 * k + 1));
+        long double num2 = double_fact(2 * k + 1);
         s1 += (num1 / num2);
     }
         
     for (int k = 0; k < 11; k++){
-        float num1 = pow(n, (2 * k));
-        float num2 = double_fact(2 * k);
+        long double num1 = pow(n, (2 * k));
+        long double num2 = double_fact(2 * k);
         s2 += (num1 / num2);
     }
 
-    float res = s1 / s2;
+    long double res = s1 / s2;
     return res;
 }
     
-float final(float y){
-    float n1 = 7 * t(0.25) + 2 * t(1 + y);
-    float n2 = 6 - t(pow(y, 2) - 1);
+long double final(float y){
+    long double n1 = 7 * t(0.25) + 2 * t(1 + y);
+    long double n2 = 6 - t(pow(y, 2) - 1);
     // cout << n1 << " " << n2 << endl;
     return (n1 / n2);
 }
@@ -43,7 +43,7 @@ float final(float y){
 
 int main()
 {
-    float y;
+    long double y;
     cin >> y;
 
     cout << final(y) << endl;
